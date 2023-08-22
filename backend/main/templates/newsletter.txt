@@ -1,0 +1,7 @@
+HOLA {{usuario.nombre}} {{usuario.apellido}}!!!
+
+{% for producto in productos %}
+        {{producto}}
+{% endfor %}
+
+
