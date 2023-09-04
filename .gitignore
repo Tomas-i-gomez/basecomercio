@@ -1,0 +1,8 @@
+# .gitignore
+# /backend/.env
+# /backend/basecomercio.db
+# /backend/pyvenv.cfg
+# /backend//Include
+# /backend//Lib
+# /backend//Scripts
+# version.txt

@@ -40,6 +40,7 @@ def create_app():
 
 
     import main.resources as resources
+    import main.controllers as controllers
     api.add_resource(resources.ClientesResource, '/clientes')
     api.add_resource(resources.ClienteResource, '/clientes/<id>')
     api.add_resource(resources.UsuariosResource, '/usuarios')
@@ -50,6 +51,9 @@ def create_app():
     api.add_resource(resources.CompraResource, '/compra/<id>')
     api.add_resource(resources.ProductosComprasResource, '/productos-compras')
     api.add_resource(resources.ProductoCompraResource, '/producto-compra/<id>')
+
+    api.add_resource(controllers.CompraController, '/compra-controller/<id>')
+    api.add_resource(controllers.ComprasController, '/compras-controller')
 
     api.init_app(app)
 
