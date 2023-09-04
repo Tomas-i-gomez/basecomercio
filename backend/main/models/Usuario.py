@@ -9,8 +9,8 @@ class Usuario(db.Model):
     apellido = db.Column(db.String(45), nullable=False)
     email = db.Column(db.String(60), nullable=False, unique=True, index=True)
     role = db.Column(db.String(45), nullable=False, default="cliente")
-    telefono = db.Column(db.Integer, nullable=False)
-    password = db.Column(db.String(100), nullable=False)
+    telefono = db.Column(db.String(100), nullable=False)
+    password = db.Column(db.String(1000), nullable=False)
     fecha_registro = db.Column(db.DateTime, default=dt.datetime.now(), nullable=False)
     compras = db.relationship("Compra", back_populates="usuario", cascade="all,delete-orphan")
 

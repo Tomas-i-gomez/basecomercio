@@ -28,14 +28,14 @@ def create_app():
     load_dotenv()
 
     #Configuracion de la base de datos
-    PATH = os.getenv("DATABASE_PATH")
-    DB_NAME = os.getenv("DATABASE_NAME")
-    if not os.path.exists(f'{PATH}{DB_NAME}'):
-        os.chdir(f'{PATH}')
-        file = os.open(f'{DB_NAME}', os.O_CREAT)
+    # PATH = os.getenv("DATABASE_PATH")
+    # DB_NAME = os.getenv("DATABASE_NAME")
+    # if not os.path.exists(f'{PATH}{DB_NAME}'):
+    #     os.chdir(f'{PATH}')
+    #     file = os.open(f'{DB_NAME}', os.O_CREAT)
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{PATH}{DB_NAME}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql -hcontainers-us-west-126.railway.app -uroot -p1roCLBuE9cVINxWm3joL --port 7545 --protocol=TCP railway'
     db.init_app(app)
 
 
