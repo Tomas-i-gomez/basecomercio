@@ -35,7 +35,7 @@ def create_app():
     #     file = os.open(f'{DB_NAME}', os.O_CREAT)
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql -hcontainers-us-west-126.railway.app -uroot -p1roCLBuE9cVINxWm3joL --port 7545 --protocol=TCP railway'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://mysql -hcontainers-us-west-126.railway.app -uroot -p1roCLBuE9cVINxWm3joL --port 7545 --protocol=TCP railway'
     db.init_app(app)
 
 
